@@ -7,7 +7,7 @@ services:
             - POSTGRES_PASSWORD=airflow
             - POSTGRES_DB=airflow
 
-    webserver:
+    airflow:
         image: puckel/docker-airflow:1.10.2
         restart: always
         depends_on:
@@ -18,8 +18,6 @@ services:
         volumes:
             - ./dags:/usr/local/airflow/dags
             - ./models:/usr/local/airflow/models
-            # Uncomment to include custom plugins
-            # - ./plugins:/usr/local/airflow/plugins
         ports:
             - "8080:8080"
         command: webserver
