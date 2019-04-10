@@ -1,0 +1,10 @@
+['airplane',
+ 'frog',
+ 'deer',
+ 'cat',
+ 'frog',
+ 'airplane',
+ 'airplane',
+ 'horse',
+ 'cat',
+ 'cat']
