@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  tensorflow-serving:
+    image: 'tensorflow/serving'
+    ports:
+      - '8500:8500'
+      - '8501:8501'
+    volumes:
+      - ../models/001:/models/image_classification
+    environment:
+        - MODEL_NAME=image_classification
+
